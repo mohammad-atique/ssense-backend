@@ -3,6 +3,8 @@ const mensWearController = require("./controllers/mensWear.controllers.js")
 
 const womensWearController = require("./controllers/womensWear.controllers.js");
 
+const pageElseController = require("./controllers/pageElse.controllers.js");
+
 const cors = require('cors');
 const app = express();
 app.use(cors());
@@ -12,6 +14,7 @@ app.use("/womensWear", womensWearController);
 
 app.use("/mensWear", mensWearController);
 
+app.use("/pageElse",pageElseController)
 
 const userController=require("./controllers/user-controller.js")
 app.use("/users",userController)
