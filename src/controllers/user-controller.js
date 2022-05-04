@@ -5,7 +5,7 @@ const router = express.Router();
 router.get("/:email",async (req,res)=>{
     const user=await User.findOne({email: req.params.email}).lean().exec();
 
-    return res.status(200).send(user);
+    return res.status(200).send({user:user});
 })
 
 module.exports=router
